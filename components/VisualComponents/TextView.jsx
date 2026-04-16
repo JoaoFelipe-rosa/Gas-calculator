@@ -1,0 +1,1 @@
+{/* <Text className='text-2xl font-semibold'>O consumo do seu veiculor é de</Text> */}
