@@ -10,34 +10,42 @@ export default function PaginationButtons() {
   return (
     <View className=" ">
       <StatusBar style="light" />
-      <View className=" mb-4 min-w-full flex-row justify-between bg-black pt-14">
+      <View className=" mb-4 min-w-full flex-row justify-between bg-green-500 pb-4 pt-14">
         <Button
           onPress={() => setShowInfo(1)}
-          name="cotação"
-          iconName="cash"
+          name="Consumo"
+          iconName="car"
           size={24}
-          color="black"
+          color="green"
+          textStyle="text-black font-bold text-sm"
+          active={showInfo === 1}
         />
         <Button
           onPress={() => setShowInfo(2)}
           name="Custo"
           iconName="flash"
           size={24}
-          color="black"
+          color="green"
+          textStyle="text-black font-bold text-sm"
+          active={showInfo === 2}
         />
         <Button
           onPress={() => setShowInfo(3)}
-          name="Consumo"
-          iconName="car"
+          name="Cotação"
+          iconName="cash"
           size={24}
-          color="black"
+          color="green"
+          textStyle="text-black font-bold text-sm"
+          active={showInfo === 3}
         />
         <Button
           onPress={() => setShowInfo(4)}
           name="em breve"
           iconName="flag"
           size={24}
-          color="black"
+          color="green"
+          textStyle="text-black font-bold"
+          active={showInfo === 4}
         />
       </View>
       <ShowFunctions showInfo={showInfo ?? 1} />

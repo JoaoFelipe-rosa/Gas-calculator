@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { View, Text } from 'react-native';
 import ShowTextInput from 'components/Inputs/TextInput';
 import {Comsuption} from './TravelMath';
 
@@ -12,7 +12,10 @@ export default function LiterToKilometerPerLiterView() {
 
   return (
     <View>
-      <View className=" rounded-md border">
+      <Text className="mb-4 text-center text-2xl font-bold text-gray-800">
+        Calculadora de Consumo de Combustível
+      </Text>
+      <View >
         <ShowTextInput
           label="Distância"
           placeholder="Digite a distância"

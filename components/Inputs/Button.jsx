@@ -4,11 +4,14 @@ import { Ionicons } from '@expo/vector-icons';
 
 
 
-export default function Button({ onPress, iconName, size, color,name }) {
+export default function Button({ onPress, iconName, size, color,name, textStyle, active }) {
   return (
-    <TouchableOpacity onPress={onPress} className="rounded flex-1 items-center bg-white px-4 py-2 m-1">
+    <TouchableOpacity onPress={onPress} className={`rounded flex-1 items-center px-4 py-2 m-1 ${active ? 'bg-green-300' : 'bg-white'}`}>
       <Ionicons name={iconName} size={size} color={color} style={{ marginHorizontal: 4 }} />
-      <Text className="text-black  font-bold text-sm">{name}</Text>
+      <Text className={textStyle}>{name}</Text>
     </TouchableOpacity>
   );
 }
+
+
+// text-black  font-bold text-sm

@@ -4,7 +4,7 @@ import ShowTextInput from '../Inputs/TextInput';
 
 // (Distância Total ÷ Consumo do Carro) × Preço do Combustível + Total de Pedágios
 
-export function TravelCostView({ text }: { text: string }) {
+export function TravelCostView() {
   const [distance, setDistance] = React.useState(0);
   const [liter, setLiter] = React.useState(0);
   const [value, setValue] = React.useState(0);
@@ -14,8 +14,11 @@ export function TravelCostView({ text }: { text: string }) {
   const costOfTravel = (distance / liter) * value + tollQuantity * tollValue;
 
   return (
-    <View className="m-5">
-      <View className=" rounded-md border">
+    <View>
+      <Text className="mb-4 text-center text-2xl font-bold text-gray-800">
+        Calculadora de Custo de Viagem
+      </Text>
+      <View>
         <ShowTextInput
           label="Distância em km"
           placeholder="Digite a distância em km"
@@ -34,7 +37,7 @@ export function TravelCostView({ text }: { text: string }) {
         <ShowTextInput
           label="Valor do combustível"
           placeholder="Digite a Valor do combustível"
-          inputMode="decimal"
+          inputMode="numeric"
           onChangeText={(text) => {
             const normalized = text.replace(',', '.');
             setValue(parseFloat(normalized));
@@ -52,7 +55,7 @@ export function TravelCostView({ text }: { text: string }) {
         <ShowTextInput
           label="Valor do pedágio"
           placeholder="Digite a media de valor do pedágio"
-          inputMode="decimal"
+          inputMode="numeric"
           onChangeText={(text) => {
             const normalized = text.replace(',', '.');
             setTollValue(parseFloat(normalized));

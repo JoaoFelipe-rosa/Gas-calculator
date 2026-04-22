@@ -33,7 +33,7 @@ export function Comsuption({ distance, liter }) {
     const consumption = distance / liter;
 
     return (
-      <View>
+      <View className=''>
         <Text className='text-2xl font-semibold'>O consumo do seu veiculor é de</Text>
         <Text className='text-2x1 font-bold text-blue-800'>{consumption.toFixed(2)} km/l</Text>
       </View>
